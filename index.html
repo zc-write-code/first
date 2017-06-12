@@ -1,2 +1,204 @@
-<!doctype html>
-<html></html>
+<!DOCTYPE html>
+<html style="height: auto;">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>教师考核系统</title>
+    <link rel="stylesheet" href="css/AdminLTE.min.css">
+    <link rel="stylesheet" href="lay/font-awesome/css/font-awesome.min.css">
+    <!--图标字体CSS 27k-->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
+    <script src="js/jquery.min.js"></script>
+    <!-- 包括所有已编译的插件 -->
+    <script src="js/bootstrap.min.js"></script>
+    <!--layui-->
+    <link rel="stylesheet" href="lay/layui/css/layui.css" id="layuicss-skinlayercss">
+    <script src="lay/layui/layui.js"></script>
+
+
+
+
+
+    <link href="css/style.css" rel="stylesheet">
+
+    <style type="text/css">
+        .treeview .list-group-item {
+            cursor: pointer
+        }
+        
+        .treeview span.indent {
+            margin-left: 10px;
+            margin-right: 10px
+        }
+        
+        .treeview span.icon {
+            width: 12px;
+            margin-right: 5px
+        }
+        
+        .treeview .node-disabled {
+            color: silver;
+            cursor: not-allowed
+        }
+        
+        .node-treeview5 {
+            color: #333;
+        }
+        
+        .node-treeview5:not(.node-disabled):hover {
+            background-color: #F5F5F5;
+        }
+    </style>
+</head>
+
+<body class="page_bgxx page_bgxx02" style="height: auto;">
+    <!---dh str-->
+    <div class="page_dh_kk hidden-xs">
+
+        <div class="page_dh_xq">
+            <ul>
+                <li><a href="../main.html"><i class="fa fa-home"></i> 首页</a></li>
+                <li><a href="teacher_index.html"><i class="fa fa-angle-right"></i> 教师考核系统</a></li>
+            </ul>
+        </div>
+
+        <!--qiehuan str-->
+        <div class="dropdown dh_qh">
+            <select class="form-control" id="termSelect">
+<option value="26">2017-2018年度上学期</option>
+<option value="23">2017-2018年度上学期</option>
+<option value="25">2016-2017年度下学期</option>
+<option value="24">2016-2017年度上学期</option>
+</select>
+        </div>
+        <!--qiehuan end-->
+
+    </div>
+    <!---dh end-->
+
+
+
+    <!--内容 str-->
+    <!-- Main content -->
+    <section class="content">
+        <div class="row">
+
+            <!--p_left str-->
+            <div class="col-md-3">
+                <a href="teacher_index.html" class="btn btn-success btn-block margin_bm10">考核项目</a>
+
+                <!--treeview str-->
+                <div id="treeview5" class="treeview">
+
+                </div>
+                <!--treeview end-->
+
+
+            </div>
+            <!-- /.col -->
+            <!--p_left end-->
+
+            <!--p_right str-->
+            <div class="col-md-9">
+                <div class="box box-primary">
+                    <div class="box-header with-border">
+                        <ol class="breadcrumb breadcrumb_dh margin_bm0">
+                            <li>教学常规</li>
+                            <li>教学检查</li>
+                            <li class="active">备课</li>
+                        </ol>
+
+
+                    </div>
+                    <!-- /.box-header -->
+
+
+                    <div class="box-body no-padding">
+
+                        <div class="table-responsive mailbox-messages ">
+                            <table class="table table-hover table-striped">
+                                <thead>
+                                    <tr>
+                                        <th class="center">序号</th>
+
+                                        <th>时间</th>
+                                        <th>详情</th>
+                                        <th>状态</th>
+                                    </tr>
+                                </thead>
+
+
+
+                                <tbody>
+
+                                    <tr>
+                                        <td class="center">1</td>
+                                        <td>2017-06-02</td>
+                                        <td>学校教学常规管理实施细则</td>
+                                        <td><span class="lu">情况良好</span></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="center">2</td>
+                                        <td>2017-06-02</td>
+                                        <td>学校教学常规管理实施细则</td>
+                                        <td><span class="red">无备课（扣2分）</span></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="center">3</td>
+                                        <td>2017-06-02</td>
+                                        <td>学校教学常规管理实施细则</td>
+                                        <td><span class="red">不按要求备课（扣0.5分）</span></td>
+                                    </tr>
+
+
+
+                                </tbody>
+                            </table>
+
+                            <!--无数据时提示 str-->
+                            <div class="page_wushuju">
+                                <div class="page_preview">
+                                    <div class="page_drop-zone">
+                                        <div class="page_drop-zone-title"><i class="fa  fa-exclamation-circle"></i>暂无相关数据</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--无数据时提示 end-->
+
+
+                            <!-- /.table -->
+                        </div>
+                        <!-- /.mail-box-messages -->
+                    </div>
+                    <!-- /.box-body -->
+                </div>
+                <!-- /. box -->
+            </div>
+            <!-- /.col -->
+
+            <!--p_right end-->
+        </div>
+        <!-- /.row -->
+    </section>
+    <!-- /.content -->
+
+    <!--内容 end-->
+
+
+    <!-- AdminLTE App -->
+    <script src="js/app.min.js"></script>
+    <!--treeview 树形结构-->
+    <script src="js/bootstrap-treeview.js"></script>
+    <script src="js/kaohe_left_tree.js"></script>
+    <div id="qb-sougou-search" style="display: none; opacity: 0;">
+        <p>搜索</p>
+        <p class="last-btn">复制</p><iframe src=""></iframe></div>
+</body>
+
+</html>
